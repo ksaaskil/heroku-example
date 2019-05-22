@@ -1,27 +1,45 @@
 # Example app for deploying to Heroku
 
-### Usage
+## Usage
 
 ```
 npm start
 ```
 
-### Deployment to Heroku
+## Setting up Heroku
+
+### Creating a Heroku app
 
 First ensure that you have the Heroku CLI installed.
 
-Create a Heroku app:
+Create a Heroku app from the root of this repository:
 
 ```
 heroku create [optional-app-name]
 ```
 
-Check that a new remote `heroku` was added to the Git repository:
+Check that a new remote `heroku` was added to the repository:
 
 ```
 git remote -v
 ```
 
-Type `heroku open` to open the app in browser. `heroku local` serves the locally.
+Type `heroku open` to open the app in browser. It should show the default page as we haven't deployed our application yet.
+
+Type
+
+```
+heroku local
+```
+
+to serve the app locally.
+
+#### Automatic deployments from GitHub
 
 Navigate to the app you created in Heroku dashboard and enable GitHub integration in "Deploy" tab. Connect your repository and enable automatic deploys from `master` branch. Then push to `master` to see your app being automatically deployed.
+
+#### Automatic deployments from CircleCI
+
+1. Add the repository as a project in CircleCI
+1. Read the instructions for Heroku deployment [here](https://circleci.com/docs/2.0/deployment-integrations/#heroku). You need to setup `HEROKU_APP_NAME` and `HEROKU_API_KEY` as environment variables in CircleCI.
+1. See [./circleci/config.yml](./.circleci/config.yml) for an example how to configure CircleCI to deploy `master` to Heroku.
