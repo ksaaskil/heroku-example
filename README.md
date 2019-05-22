@@ -22,6 +22,6 @@ Check that a new remote `heroku` was added to the Git repository:
 git remote -v
 ```
 
-Type `heroku open` to open the app in browser.
+Type `heroku open` to open the app in browser. `heroku local` serves the locally.
 
-Navigate to the app you created in Heroku dashboard and eable GitHub integration in "Deploy" tab.
+Navigate to the app you created in Heroku dashboard and enable GitHub integration in "Deploy" tab. Connect your repository and enable automatic deploys from `master` branch. Then push to `master` to see your app being automatically deployed.
