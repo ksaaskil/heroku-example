@@ -34,11 +34,11 @@ heroku local
 
 to serve the app locally.
 
-#### Automatic deployments from GitHub
+### Automatic deployments from GitHub
 
 Navigate to the app you created in Heroku dashboard and enable GitHub integration in "Deploy" tab. Connect your repository and enable automatic deploys from `master` branch. Then push to `master` to see your app being automatically deployed.
 
-#### Automatic deployments from CircleCI
+### Automatic deployments from CircleCI
 
 1. Add the repository as a project in CircleCI
 1. Read the instructions for Heroku deployment [here](https://circleci.com/docs/2.0/deployment-integrations/#heroku). You need to setup `HEROKU_APP_NAME` and `HEROKU_API_KEY` as environment variables in CircleCI.
