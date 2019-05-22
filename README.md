@@ -41,5 +41,5 @@ Navigate to the app you created in Heroku dashboard and enable GitHub integratio
 ### Automatic deployments from CircleCI
 
 1. Add the repository as a project in CircleCI
-1. Read the instructions for Heroku deployment [here](https://circleci.com/docs/2.0/deployment-integrations/#heroku). You need to setup `HEROKU_APP_NAME` and `HEROKU_API_KEY` as environment variables in CircleCI.
+1. Read the instructions for Heroku deployment [here](https://circleci.com/docs/2.0/deployment-integrations/#heroku). You need to setup `HEROKU_APP_NAME` and `HEROKU_API_KEY` as environment variables in CircleCI. See [here](https://help.heroku.com/PBGP6IDE/how-should-i-generate-an-api-key-that-allows-me-to-use-the-heroku-platform-api) how to find your Heroku API key.
 1. See [./circleci/config.yml](./.circleci/config.yml) for an example how to configure CircleCI to deploy `master` to Heroku.
